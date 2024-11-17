@@ -1,3 +1,92 @@
+# Employee Access Management System
+
+A comprehensive system for managing employee access rights across multiple services and platforms.
+
+## 🚀 Features
+
+- **Employee Management**
+  - Detailed employee profiles
+  - Department organization
+  - Status tracking
+  - Bulk import/export
+
+- **Access Control**
+  - Multi-service access management
+  - Role-based permissions
+  - Biometric integration
+  - Access history tracking
+
+- **Service Integration**
+  - VPN access
+  - Biometric systems
+  - IPAM system
+  - Grafana dashboards
+  - Teleport access
+
+- **Analytics & Reporting**
+  - Usage statistics
+  - Department analytics
+  - Access trends
+  - Audit logs
+
+## 🛠️ Technologies
+
+- **Frontend**
+  - React 18+
+  - Material UI Dashboard
+  - Recharts
+  - React Router
+
+- **Backend**
+  - Laravel 10+
+  - Laravel JSON:API
+  - MySQL/PostgreSQL
+  - Redis
+
+## 🏗️ Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/your-repo.git
+   ```
+
+2. **Frontend Setup**
+   ```bash
+   cd react-material-laravel-app
+   npm install --legacy-peer-deps
+   cp .env.example .env
+   # Update .env with your configuration
+   npm start
+   ```
+
+3. **Backend Setup**
+   ```bash
+   cd laravel-json-api
+   composer install
+   cp .env.example .env
+   # Update .env with your database configuration
+   php artisan key:generate
+   php artisan migrate
+   php artisan serve
+   ```
+
+## 📖 Usage
+
+1. **Access Management**
+   - Navigate to the Access Management dashboard
+   - Use the quick actions menu for common tasks
+   - Manage individual or bulk access rights
+
+2. **Service Integration**
+   - Configure service connections in the settings
+   - Set up authentication methods
+   - Define access levels
+
+3. **Reporting**
+   - Access the Analytics dashboard
+   - Generate custom reports
+   - Export data as needed
+
 # [Material Dashboard 2 React Laravel JSON:API](https://react-material-dashboard-laravel.creative-tim.com/?ref=readme-mdr) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?text=Check%20Material%20Dashboard%20%20PRO%20React%20made%20by%20%40CreativeTim%20and%20%40UPDIVISION%20%23webdesign%20%23dashboard%20%23react%20%23mui&url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Freact-material-dashboard-laravel)
 
 ![version](https://img.shields.io/badge/version-2.1.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/material-dashboard-react.svg)](https://github.com/creativetimofficial/material-dashboard-react-laravel/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/material-dashboard-react.svg)](https://github.com/creativetimofficial/material-dashboard-react-laravel/issues?q=is%3Aissue+is%3Aclosed)
