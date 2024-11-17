@@ -1,40 +1,38 @@
 <?php
 
-namespace App\JsonApi\V2\Users;
+namespace App\JsonApi\V2\Services;
 
-use App\Models\User;
+use App\Models\Service;
 use LaravelJsonApi\Eloquent\Contracts\Paginator;
 use LaravelJsonApi\Eloquent\Fields\DateTime;
 use LaravelJsonApi\Eloquent\Fields\ID;
 use LaravelJsonApi\Eloquent\Fields\Str;
-use LaravelJsonApi\Eloquent\Fields\Relations\BelongsTo;
 use LaravelJsonApi\Eloquent\Fields\Relations\HasMany;
 use LaravelJsonApi\Eloquent\Filters\WhereIdIn;
 use LaravelJsonApi\Eloquent\Pagination\PagePagination;
 use LaravelJsonApi\Eloquent\Schema;
 
-class UserSchema extends Schema
+class ServiceSchema extends Schema
 {
-    public static string $model = User::class;
+    public static string $model = Service::class;
 
     public function fields(): array
     {
         return [
             ID::make(),
             Str::make('name'),
-            Str::make('email'),
-            Str::make('employee_id'),
+            Str::make('type'),
+            Str::make('authType'),
+            Str::make('description'),
+            Str::make('config'),
             Str::make('status'),
-            DateTime::make('email_verified_at')->sortable(),
-            DateTime::make('created_at')->sortable()->readOnly(),
-            DateTime::make('updated_at')->sortable()->readOnly(),
+            DateTime::make('createdAt')->sortable()->readOnly(),
+            DateTime::make('updatedAt')->sortable()->readOnly(),
+            DateTime::make('deletedAt')->sortable()->readOnly(),
 
-            // Define the relationships
-            BelongsTo::make('department'),
-            HasMany::make('services'),
+            // Relationships
             HasMany::make('serviceAccess'),
-            HasMany::make('activities'),
-            HasMany::make('biometricRegistration')
+            HasMany::make('users')
         ];
     }
 
